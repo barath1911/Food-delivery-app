@@ -25,9 +25,7 @@ public class Delivery {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long deliveryId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "order_id")
-	private Orders order;
+	private Long orderId;
 
     private String deliveryPartnerName;
 

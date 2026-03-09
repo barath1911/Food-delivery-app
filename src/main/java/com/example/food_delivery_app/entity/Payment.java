@@ -25,9 +25,7 @@ public class Payment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long paymentId;
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "order_id")
-	private Orders order;
+	private Long orderId;
 
     private Double amount;
 
@@ -35,4 +33,9 @@ public class Payment {
     private PaymentStatus status; // SUCCESS, FAILED, PENDING
 
     private LocalDateTime paymentTime;
+
+	public void setOrderId(Long orderId) {
+		// TODO Auto-generated method stub
+
+	}
 }
